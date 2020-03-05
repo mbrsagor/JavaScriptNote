@@ -71,3 +71,45 @@ const user = {
     },
 };
 user.sayName();
+
+// How to use class
+class Man{
+    constructor(username, password) {
+        this.username = username;
+        this.password = password;
+    }
+
+    access() {
+        console.log(`Username: ${this.username} and Password: ${this.password}`);
+    }
+}
+
+const man = new Man('sagor', 'sagor123');
+man.access();
+
+
+class Woman extends Man{
+    constructor(username, password, email) {
+        super(username, password);
+        this.email = email;
+    }
+
+    access() {
+        console.log(`Email: ${this.email}`);
+    }
+}
+
+const woman = new Woman('something', 'something123', 'mbrsagor@gmail.com');
+woman.access();
+
+// 
+const prom = new Promise((resolve, reject) => {
+    // Here is async
+    setTimeout(() => {
+        resolve({ 'title': 'Another new post.', 'content': 'Hello there, I am sagor start-up software developer.', 'author': 'mbr-sagor' });
+        reject(new Error('Something went wrong'));
+    }, 2000);
+});
+prom.then(data => {
+    console.log(data);
+}).catch(err => console.log(err));
