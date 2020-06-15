@@ -1,8 +1,30 @@
-class MyClass {
-    addToNewData = () => {
-        console.log("Data added the function.");
+class Data {
+
+    // Here the data-structure is very basic
+    /*
+        My another brother call me how he use data-structure implement javascript.
+        So, I'm just give him a simple guide-line. 
+    */
+
+    constructor() {
+        var list = [];
     }
+
+    // Setter method
+    setData(data) {
+        // use push
+    }
+
+    // Getter method
+    getData() {
+        // use pop
+    }
+
+    // Total data or size
+    dataSize() {
+
+    }
+
 }
 
-mycls = new MyClass();
-mycls.addToNewData();
+obj = new Data();
