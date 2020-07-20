@@ -1,3 +1,8 @@
+/**
+ * The factorial example look like same
+ * 1 x 2 x 3 x 4 x 5
+ */
+
 factorial = (n) => {
     if (n === 0) {
         return n
