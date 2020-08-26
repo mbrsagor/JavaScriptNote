@@ -5,9 +5,7 @@
 
 
 fibonacci = (number) => {
-    if (number === 0) {
-        return number;
-    } else if (number === 1) {
+    if (number === 0 || number == 1) {
         return number;
     } else {
         return number + fibonacci(number - 1);
