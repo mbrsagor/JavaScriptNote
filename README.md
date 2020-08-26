@@ -6,6 +6,10 @@ your
 system
 . JavaScript `ES6` features is awesome if you learn the `ES6` you may easily handel `react, VUE, Angular` project.
 
+```javascript
+my_bio = () => "A simplest changes make huge difference.";
+```
+
  ##### Install Node on Mac.
  First, install Homebrew.
  ``/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``
@@ -52,8 +56,11 @@ node -v
 - Function
     - Old function
     - Arrow function
+    - Callback function
+    - Promise
 
 - OOP
     - Class
+    - Constructor
     - Object 
 
