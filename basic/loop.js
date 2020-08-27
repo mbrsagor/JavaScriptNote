@@ -39,7 +39,14 @@ var factorial = 1;
 // console.log(factorial);
 
 
-for (var i = 0; i <= 10; i++) {
-    factorial += i;
-    console.log("Factorial of", i, "is", factorial);
+factorial_number = () => {
+    for (var i = 0; i <= 10; i++) {
+        factorial += i;
+        console.log(`Factorial of ${i} is ${factorial}`);
+    }
+}
+// factorial_number();
+
+for (let row = "*"; row.length < 20; row += "*"){
+    console.log(row);
 }
