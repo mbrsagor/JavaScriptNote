@@ -29,3 +29,14 @@ let change_first_name = data.first_name = "Md.Bozlur Rosid";
 let change_last_name = data.last_name = "Sagor";
 
 console.log(data);
+
+// Searching data from object
+const list = {
+    row: {"id:":1, "title": "I'm learning Javascript", "author": "mbrsagor"},
+    row2: {"id:":2, "title": "I'm learning Python", "author": "sagor"},
+    row3: {"id:":3, "title": "I'm learning React.JS", "author": "mbr-sagor"},
+    row4: {"id:":4, "title": "I'm learning Angular.JS", "author": "mbrsagor"},
+}
+const { row } = list;
+const result = ({ row })
+console.log(result);
