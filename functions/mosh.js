@@ -66,3 +66,14 @@ console.log(active_job);
 
 const active_job2 = jobs.filter(job => job.isActive) // Arrow function
 console.log(active_job2);
+
+
+const person3 = {
+    talk() {
+        // var self = this;
+        setTimeout(() => {
+            console.log("this:", this);
+        }, 1000);
+    }
+}
+person3.talk();
