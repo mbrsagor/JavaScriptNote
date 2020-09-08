@@ -20,5 +20,18 @@ const person = {
 person.talk()
 person['name'] = 'Sagor';
 
-console.log(person);
+// console.log(person);
 
+// Here using `this` keywoard
+const person2 = {
+    name: 'Mbr-Sagor',
+    walk() {
+        console.log(this);
+    }
+}
+person2.walk();
+
+const walk = person2.walk.bind(person2);
+console.log(walk);
+walk()
+ 
