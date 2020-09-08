@@ -77,3 +77,24 @@ const person3 = {
     }
 }
 person3.talk();
+
+const items = ['MacBook', 'MacBook Air', 'MacBook Pro', 'Imac']
+const i = items.map(function (item) { return item }) // function
+const i2 = items.map(item => `${item}`) // arrow function
+console.log(i2);
+ 
+
+// Combaine operator
+const first = [1, 2, 3, 4]
+const second = [5, 6, 7, 8]
+const combain = first.concat(second)
+console.log(combain)
+
+const combain2 = [... first, ... second]
+console.log(combain2);
+
+const obj1 = { name: "Md.Bozlur Rosid Sagor" };
+const obj2 = { job: "Software developer." };
+
+const combined_obj = {...obj1, ...obj2, ...{location: 'Dhaka, Bangaldesh'}}
+console.log(combined_obj);
