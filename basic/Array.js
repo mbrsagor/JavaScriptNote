@@ -17,3 +17,21 @@ var newItem = item1.pop();
 item2.push(newItem);
 
 console.log(item1, item2);
+
+
+const numbers = [1, 2, 3, 4, 5] 
+const index = numbers.indexOf(2);
+// const added = [10, ...numbers]; // add new
+const added = [
+    ...numbers.slice(0, index),
+    10, 40
+]
+console.log(added);
+
+// Removing
+const remove = numbers.filter(n => n !== 5);
+console.log(remove);
+
+// Updating
+const update = numbers.map(n => n === 2 ? 20 : n);
+console.log(update);
