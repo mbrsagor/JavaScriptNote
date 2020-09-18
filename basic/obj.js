@@ -30,6 +30,15 @@ let address = {
     house: 12
 }
 
+/**
+ *
+ for (let index = 0; index < address.length; index++) {
+     const element = address[index];
+     console.log(element);
+ }
+ *
+ */
+
 for (const [key, val] of Object.entries(address)) {
     console.log(`${key}: ${val}`);
 }
