@@ -27,3 +27,10 @@ console.log(is_ative);
 var $ = "username";
 console.log($);
 
+
+function calculate(num1, num2) {
+    var result;
+    return result = `Total add: ${num1 + num2} ${'\n'}Total sub: ${num1 - num2}${'\n'}Total mul: ${num1 * num2}${'\n'}Total div: ${num1 / num2}${'\n'}Total module: ${num1 % num2}`
+}
+cal = calculate(50, 30);
+console.log(cal);
