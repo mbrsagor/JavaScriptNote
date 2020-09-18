@@ -34,3 +34,33 @@ function calculate(num1, num2) {
 }
 cal = calculate(50, 30);
 console.log(cal);
+
+// undefine and null
+let f_name = '', l_name;
+if (f_name === l_name) {
+    console.log(typeof (f_name));
+    console.log("It's okay");
+} else {
+    console.log(typeof (l_name));
+    console.log("It's not okay man!");
+}
+
+// Local date time
+let date = Date();
+console.log(date);
+
+let text = "Hello there, I'm full-stack software developer with more then 2 year solid...";
+console.log(`Length of text: ${text.length}`);
+
+// Object
+let employee = {
+    first_name: "mbr",
+    last_name: "sagor",
+    full_name: "Bozlur Rosid Sagor",
+    email: "sagor@gamil.com"
+}
+// display all
+console.log(employee);
+// change/update 1st name
+employee.first_name = "Mr.";
+console.log(employee);
