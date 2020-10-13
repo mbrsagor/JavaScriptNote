@@ -1,5 +1,3 @@
-const { node } = require("prop-types");
-
 class Node {
     constructor(data, next = null) {
         this.data = data
@@ -34,8 +32,10 @@ node3.next = node4
 node4.next = node5
 node5.next = node6
 
+// Insert new node in head
 const link_list = new LinkList();
 link_list.insertHead(77);
 link_list.insertHead(88);
 link_list.insertHead(99);
 
+console.table(link_list);
