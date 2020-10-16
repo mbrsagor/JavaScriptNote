@@ -1,34 +1,34 @@
 var number = 0;
 
-// while (number <= 10) {
-//     console.log(number);
-//     number += 2;
-// }
+while (number <= 10) {
+    console.log(number);
+    number += 2;
+}
 
-// while (true) {
-//     console.log(number);
-//     if (10 == number) {
-//         break;
-//     };
-//     number++;
-// }
-
-
-// do {
-//     console.log("I am counting " + number);
-//     number++;
-// } while (number <= 10);
+while (true) {
+    console.log(number);
+    if (10 == number) {
+        break;
+    };
+    number++;
+}
 
 
-// for (var i = 0; i <= 10; i+=2) {
-//     console.log(i);
-// }
+do {
+    console.log("I am counting " + number);
+    number++;
+} while (number <= 10);
 
 
-// var i, j;
-// for (i = 0, j = 10; i <= 10; i++ , j--) {
-//     console.log(i, j);
-// }
+for (var i = 0; i <= 10; i+=2) {
+    console.log(i);
+}
+
+
+var i, j;
+for (i = 0, j = 10; i <= 10; i++ , j--) {
+    console.log(i, j);
+}
 
 var n = 4;
 var factorial = 1;

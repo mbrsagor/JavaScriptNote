@@ -6,6 +6,7 @@ console.log(something);
 
 something = "He knows something about ....";
 console.log(something);
+console.log(something.length);
 
 /*
 Here JavaScript ES6 `const` value not change
@@ -21,7 +22,7 @@ const books = ['Java', 'Python', 'JavaScript'];
 books.forEach((book, index) => {
     console.log(`${index}. ${book}`);
 })
-console.log("=======================");
+console.log("\n");
 // map
 const bookList = books.map(item => {
     console.log(item)
