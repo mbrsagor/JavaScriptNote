@@ -1,6 +1,5 @@
 const { say } = require('./index');
-const username = require('./index');
+const _module = require('./index');
 
-console.log(username);
-
-console.log(say());
+console.log(_module.name);
+_module.say()
