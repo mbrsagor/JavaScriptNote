@@ -14,3 +14,9 @@ function calculator(...numbers) {
 }
 
 calculator(20, 30, 50);
+
+
+let rest_func = (...users) => {
+    console.log(users);
+}
+console.log("mbrsagor", "ohi", "meg", "dhurbo");
