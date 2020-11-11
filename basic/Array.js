@@ -35,3 +35,10 @@ console.log(remove);
 // Updating
 const update = numbers.map(n => n === 2 ? 20 : n);
 console.log(update);
+
+
+// Simple array iteate
+let books = ['Python', 'JavaScript', 'Java', 'Swift', 'Dart'];
+for (let book of books) {
+    console.log(book);
+}
