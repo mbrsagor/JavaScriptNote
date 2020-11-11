@@ -40,3 +40,9 @@ const list = {
 const { row } = list;
 const result = ({ row })
 console.log(result);
+
+/**
+for (let lst in list) {
+    console.log(list[lst]);
+}
+ */
