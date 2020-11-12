@@ -20,3 +20,5 @@ let rest_func = (...users) => {
     console.log(users);
 }
 console.log("mbrsagor", "ohi", "meg", "dhurbo");
+
+console.log("Now I'm 😆");
