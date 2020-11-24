@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Object Model</title>
+</head>
+<body>
+
+    <div class="card">
+        <h2 id="card-title"></h2>
+    </div>
+
+    <script type="text/javascript">
+        // alert('Hello world');
+        const card_title =document.getElementById('card-title').innerHTML = "Hello world";
+        console.log(card_title);
+
+        // Create paragraph element
+        for (let i = 1; i <= 5; i++) {
+            const newElement = document.createElement('p');
+            newElement.textContent = 'This is paragraph number ' + i;
+            document.body.appendChild(newElement);
+        }
+
+        // Create `div` elements
+        const myCustomDiv = document.createElement('div');
+            for (let i = 1; i <= 10; i++) {
+                const newElement = document.createElement('p');
+                newElement.innerText = 'Hello, I am count: ' + i;
+                myCustomDiv.appendChild(newElement);
+            }
+            document.body.appendChild(myCustomDiv);
+
+    </script>
+</body>
+</html>
