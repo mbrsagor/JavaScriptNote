@@ -1,4 +1,4 @@
-class Person {
+class Employee {
 
     constructor(first_name, last_name, age, salary, company_name) {
         this.first_name = first_name
@@ -12,7 +12,7 @@ class Person {
         return this.first_name + "." + this.last_name + this.company_name;
     }
 
-    personInfo() {
+    about() {
         var info;
         info = "First Name: " + this.first_name + "\n" + "Last Name: " + this.last_name + "\n" + "Age: " + this.age + "\n" + "Salary: " + this.salary + "\n" + "Full Name: " + this.first_name + " " + this.last_name + "\n" + "Email: " + this.first_name + "." + this.last_name +"@"+this.company_name
         return info;
@@ -20,5 +20,5 @@ class Person {
 
 }
 
-person1_instance = new Person("mbr", "sagor", 24, 25000, "Divine-IT Ltd.");
-console.log(person1_instance.personInfo())
+employee_instance = new Employee("mbr", "sagor", 24, 25000, "Divine-IT Ltd.");
+console.log(employee_instance.about());
