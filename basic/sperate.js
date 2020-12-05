@@ -11,3 +11,8 @@ let names = {
 
 const new_name = { ...names, 'profession': 'Full-stack software engineer.' };
 console.log(new_name);
+
+books.sort();
+console.log(books);
+books.reverse();
+console.log(books);
