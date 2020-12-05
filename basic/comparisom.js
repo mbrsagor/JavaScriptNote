@@ -1,11 +1,9 @@
-/*
 var n = 7;
 if (n > 10) {
-    console.log("This number 10 is smaller then " + n);
+  console.log("This number 10 is smaller then " + n);
 } else {
-    console.log(n+" is greather then this number");
+  console.log(n + " is greather then this number");
 }
-*/
 
 
 /*
@@ -42,48 +40,45 @@ if ('sagor' == personOne && 'sowrov' == personTwo && theyAreBrother) {
 }
 */
 
-
-/*
 n = 4;
 if (n <= 10) {
-    if (n == 2 || n==3 || n==5 || n==7) {
-        console.log("This number "+n+" is smaller then 12 and it's a prime number")
-    } else {
-        console.log("This number " + n + " is smaller then 12 and it's not a prime number")
-    }
+  if (n == 2 || n == 3 || n == 5 || n == 7) {
+    console.log(
+      "This number " + n + " is smaller then 12 and it's a prime number"
+    );
+  } else {
+    console.log(
+      "This number " + n + " is smaller then 12 and it's not a prime number"
+    );
+  }
 } else {
-    console.log("This number " + n + " is getter then 12")
+  console.log("This number " + n + " is getter then 12");
 }
-*/
 
 
-// var n = 0;
-// var reminder = n % 2;
+var n = 0;
+var reminder = n % 2;
 
-// if (0 == n) {
-//     console.log(n + " is neutral number!! Not a event or odd");
-// }
-// else if (0 == reminder) {
-//     console.log("This number "+n+" is event");
-// } else {
-//     console.log("This number " + n + " is odd");
-// };
+if (0 == n) {
+    console.log(n + " is neutral number!! Not a event or odd");
+}
+else if (0 == reminder) {
+    console.log("This number "+n+" is event");
+} else {
+    console.log("This number " + n + " is odd");
+};
 
-
-/*
-var movie_rating = 'r';
+var movie_rating = "r";
 var age = 18;
-if ('pg'==movie_rating && age >=13) {
-    console.log("You can watch this movie");
-} else if ('r' == movie_rating && age >= 18) {
-    console.log("You can watch this movie");
-} else if ('g' == movie_rating) {
-    console.log("You can watch this movie");
+if ("pg" == movie_rating && age >= 13) {
+  console.log("You can watch this movie");
+} else if ("r" == movie_rating && age >= 18) {
+  console.log("You can watch this movie");
+} else if ("g" == movie_rating) {
+  console.log("You can watch this movie");
 } else {
-    console.log("You can't watch this movie");
+  console.log("You can't watch this movie");
 }
-*/
-
 
 var age = 300;
 var result;
