@@ -42,3 +42,10 @@ let books = ['Python', 'JavaScript', 'Java', 'Swift', 'Dart'];
 for (let book of books) {
     console.log(book);
 }
+
+console.log(books);
+
+let currentMemeber = is_active => {
+    return(is_active ? 'Active Member' : 'Deactive Member');
+}
+console.log(currentMemeber(true));
