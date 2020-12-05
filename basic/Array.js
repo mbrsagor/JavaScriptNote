@@ -49,3 +49,7 @@ let currentMemeber = is_active => {
     return(is_active ? 'Active Member' : 'Deactive Member');
 }
 console.log(currentMemeber(true));
+
+let age = 19;
+let can_drive = age > 16 ? "yes" : "no";
+console.log(can_drive);

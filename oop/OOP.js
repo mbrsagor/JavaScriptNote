@@ -9,10 +9,10 @@ class Car {
 
 }
 
-// my_car = new Car("BMW");
+my_car = new Car("BMW");
 
-// console.log("My car name is: " + my_car.brand);
-// console.log(my_car.parent());
+console.log("My car name is: " + my_car.brand);
+console.log(my_car.parent());
 
 
 class Configuration extends Car {
