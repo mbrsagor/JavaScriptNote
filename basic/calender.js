@@ -1,9 +1,9 @@
-var monthName = "April";
+var monthName = "January 2021";
 var days = 31;
 var startingDay = 0;
 
 console.log("\n\nCalander of", monthName, "\n");
-console.log("sun    mon    thu    wed    thu    fri    sat");
+console.log("sun    mon    thu    wed    thu    fri   sat");
 
 for (var i = 0; i < 5; i++) {
     var dayRow = "";
