@@ -1,4 +1,4 @@
-let book = { title: "Simple blog post title" }
+const book = { title: 'Simple blog post title' };
 
 function publish(book) {
     book.isPublish = false;
@@ -13,6 +13,6 @@ console.log(array1.findIndex(isLargeNumber));
 
 const beasts = ['ant', 'bison', 'camel', 'duck', 'bison'];
 console.log(beasts.indexOf('bison'));
-console.log(beasts.lastIndexOf('duck'))
+console.log(beasts.lastIndexOf('duck'));
 console.log(beasts.sort());
 console.log(beasts.reverse());
