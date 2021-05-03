@@ -1,0 +1,41 @@
+<html>
+<head>
+  <title>DOM Tests</title>
+  <script>
+    function setBodyAttr(attr, value) {
+      if (document.body) document.body[attr] = value;
+      else throw new Error("no support");
+    }
+  </script>
+</head>
+<body>
+  <div style="margin: .5in; height: 400px;">
+    <p><b><code>text</code></b></p>
+    <form>
+      <select onChange="setBodyAttr('text',
+        this.options[this.selectedIndex].value);">
+        <option value="black">black</option>
+        <option value="red">red</option>
+      </select>
+      <p><b><code>bgColor</code></b></p>
+      <select onChange="setBodyAttr('bgColor',
+        this.options[this.selectedIndex].value);">
+        <option value="white">white</option>
+        <option value="lightgrey">gray</option>
+      </select>
+      <p><b><code>link</code></b></p>
+      <select onChange="setBodyAttr('link',
+        this.options[this.selectedIndex].value);">
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+      </select>
+      <small>
+        <a href="http://some.website.tld/page.html" id="sample">
+          (sample link)
+        </a>
+      </small><br />
+      <input type="button" value="version" onclick="ver()" />
+    </form>
+  </div>
+</body>
+</html>
