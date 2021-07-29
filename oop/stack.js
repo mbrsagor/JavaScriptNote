@@ -34,6 +34,7 @@ class Stack {
 
 }
 
+
 my_stack = new Stack();
 my_stack.addItem("Apple");
 my_stack.addItem("MacBook");

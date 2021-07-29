@@ -1,10 +1,8 @@
-# JavaScript ES6 tutorial
+# JavaScript ES6 full tutorial
 
-In this topic I will use to visual stdio code(vs-code). First install `node.js` and `NPM`(node package manager) then 
-install `vs-code` in 
-your 
-system
-. JavaScript `ES6` features is awesome if you learn the `ES6` you may easily handel `react, VUE, Angular` project.
+> Coding with `Bozlur Rosid Sagor`
+
+In this topic I will use to visual stdio code(vs-code). First install `node.js` and `NPM`(node package manager) then install `vs-code` in your system. JavaScript `ES6` features is awesome if you learn the `ES6` you may easily handel `react, VUE, Angular` project.
 
 ```javascript
 my_bio = () => "A simplest changes make huge difference.";

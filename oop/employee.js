@@ -20,5 +20,8 @@ class Employee {
 
 }
 
-employee_instance = new Employee("mbr", "sagor", 24, 25000, "Divine-IT Ltd.");
+employee_instance = new Employee("Mbr", "Sagor", 24, 25000, "Circle FinTech Ltd.");
 console.log(employee_instance.about());
+console.log("\n");
+employee_instance2 = new Employee("Md", "Ohi", 24, 25000, "Google");
+console.log(employee_instance2.about());
