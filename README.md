@@ -71,3 +71,27 @@ arrayObject.filter(callback, contextObject);
 The `filter()` method creates a new array with all the elements that pass the test implemented by the `callback()` function.
 Internally, the `filter()` method iterates over each element of the array and pass each element to the `callback` function. If the `callback` function returns `true`, it includes the element in the return array.
 The `filter()` method accepts two named arguments: a `callback` function and an optional object.
+
+
+###### Generator in javascript:
+```javascript
+function* counter(value) {
+ let step;
+
+ while (true) {
+   step = yield ++value;
+
+   if (step) {
+     value += step;
+   }
+ }
+}
+
+const generatorFunc = counter(0);
+console.log(generatorFunc.next().value);   // 1
+console.log(generatorFunc.next().value);   // 2
+console.log(generatorFunc.next().value);   // 3
+console.log(generatorFunc.next(10).value); // 14
+console.log(generatorFunc.next().value);   // 15
+console.log(generatorFunc.next(10).value); // 26
+```
