@@ -10,7 +10,7 @@ console.log(username);
 // let language ="Bozlur ";
 // let middle_name = "Rosid ";
 // let last_name ="Sagor";
-// console.log(first_name, middle_name, last_name);
+// console.log(language, middle_name, last_name);
 
 let [first_name, middle_name, last_name] = ["Bozlur", "Rosid", "Sagor"];
 console.log(first_name, middle_name, last_name);
