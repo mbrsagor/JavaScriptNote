@@ -8,9 +8,9 @@ class Person {
     }
 }
  
-// const person = new Person("Sagor");
-// console.log(person);
-// person.walk();
+const person = new Person("Sagor");
+console.log(person);
+person.walk();
 
 class Teacher extends Person {
 
