@@ -10,7 +10,6 @@ phoneDecrease.addEventListener('click', function () {
 });
 
 
-
 // case price handaler
 const caseIncrease = document.getElementById('case-increase');
 caseIncrease.addEventListener('click', function () {
@@ -22,6 +21,7 @@ caseDecrease.addEventListener('click', function () {
     productPriceHandler('case', false);
 });
 
+// Product Price handaler function
 function productPriceHandler(product, isIncrease) {
     const productCounter = document.getElementById(product + '-counter');
     const counterNumber = parseFloat(productCounter.value);
@@ -47,6 +47,7 @@ function productPriceHandler(product, isIncrease) {
 }
 
 
+// Calclation Price
 function calculation() {
     const phonePrice = getInputPrice('phone');
     const casePrice = getInputPrice('case');
@@ -59,6 +60,7 @@ function calculation() {
 }
 
 
+// The function call for price input
 function getInputPrice(product) {
     const productPrice = document.getElementById(product + '-price');
     const productPriceNumber = parseFloat(productPrice.innerText);

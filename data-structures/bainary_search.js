@@ -20,6 +20,7 @@ let arr = [1, 5, 20, 58, 76, 8, 19, 41].sort(function (a, b) {
     return a - b
 });
 
+// Call
 console.log("Sorted array: " + arr);
 console.log(binarySearch(arr, 76));
 console.log(binarySearch(arr, 19));

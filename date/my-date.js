@@ -21,6 +21,7 @@ let time = `${minutes < 10 ? `0${minutes}` : minutes} :${seconds < 10 ? `0${seco
 // console.log(time);
 
 
+// Time second handler method
 function secondsToHms() {
     let seconds = 300000;
     if (!seconds) return '';
