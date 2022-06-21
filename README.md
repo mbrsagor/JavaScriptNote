@@ -1,4 +1,4 @@
-# JavaScript ES6 full tutorial
+# JavaScript
 
 > Coding with `Bozlur Rosid Sagor`
 
@@ -28,8 +28,6 @@ npm install -g grunt-cli
 npm -v
 node -v
 ```
- 
- 
 
 ###### Features:
 - ES6 basic
