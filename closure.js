@@ -26,4 +26,4 @@ console.log(counter());
 console.log(counter());
 console.log(counter());
 console.log(counter());
-// console.log(counter.count);
+console.log(counter.count);
