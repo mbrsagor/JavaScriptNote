@@ -11,4 +11,3 @@ function absoluteUrl(url) {
       return `${baseUrl()}/${url}`;
     }
   }
-
