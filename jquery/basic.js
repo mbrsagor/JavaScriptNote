@@ -8,4 +8,13 @@ $("p").on({
     click: function(){
       $(this).css("background-color", "yellow");
     }
-  });
+});
+  
+// show hide
+$("#hide").click(function(){
+  $("p").hide();
+});
+
+$("#show").click(function(){
+  $("p").show();
+});
