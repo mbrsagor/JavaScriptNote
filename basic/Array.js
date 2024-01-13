@@ -1,5 +1,5 @@
 names = ["mbr-sagor", "zia-uddin", "saif-nirob", "russel-mahmud"];
-names[names.length] = "hello-happened"; // Add data in array 
+names[names.length] = "hello-happened"; // Add data/data in array 
 names.push("Abdul-Goni"); // Add data in array using another way
 console.log(names);
 console.log('\n');

@@ -9,21 +9,22 @@ function myCalculator(num1, num2, myCallback) {
 }
 
 myCalculator(5, 5, myDisplayer);
-// function myDisplayer(some) {
-//     document.getElementById('demo').innerHTML = some;
-// }
 
-// function getFile(myCallback) {
-//     const req = new XMLHttpRequest();
-//     req.open('GET', 'mycar.html');
-//     req.onload = function () {
-//         if (req.status == 200) {
-//             myCallback(this.responseText);
-//         } else {
-//             myCallback(`Error: ${req.status}`);
-//         }
-//     };
-//     req.send();
-// }
+function myDisplayer(some) {
+    document.getElementById('demo').innerHTML = some;
+}
 
-// getFile(myDisplayer);
+function getFile(myCallback) {
+    const req = new XMLHttpRequest();
+    req.open('GET', 'mycar.html');
+    req.onload = function () {
+        if (req.status == 200) {
+            myCallback(this.responseText);
+        } else {
+            myCallback(`Error: ${req.status}`);
+        }
+    };
+    req.send();
+}
+
+getFile(myDisplayer);
