@@ -327,3 +327,18 @@
         <option value="${fuel.id}">${fuel.fuel_supply_pressure}</option>
     `);
     }
+
+// Date picker
+flatpickr(".datepicker",
+    {
+        dateFormat: "m/d/y"
+    });
+    let btnTypes = document.querySelectorAll('.travel-type-wrap .item')
+    for (let i = 0; i < btnTypes.length; i++) {
+        btnTypes[i].addEventListener('click', function () {
+            for (let i = 0; i < btnTypes.length; i++) {
+                btnTypes[i].classList.remove('active')
+            }
+            btnTypes[i].classList.add('active')
+        })
+    }
