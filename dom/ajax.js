@@ -342,3 +342,18 @@ flatpickr(".datepicker",
             btnTypes[i].classList.add('active')
         })
     }
+
+
+// Ajax search
+$(document).ready(function(){
+  
+    var ajaxFunction = function( val ){
+      $('#out').text('Val: ' + val);
+    }
+
+    $('#search').on('keyup paste',function(){
+      if(this.value.length >= 3)
+        ajaxFunction(this.value);
+    });
+  
+});
