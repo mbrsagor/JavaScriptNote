@@ -1,4 +1,4 @@
-var option = 3;
+let option = 3;
 
 switch (option) {
   case 1:
@@ -20,4 +20,3 @@ switch (option) {
     console.log("You selected option 6.");
     break; // technically, not needed
 }
-

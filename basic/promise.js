@@ -30,7 +30,7 @@ example2 = () => {
     promise.then(function () {
         console.log('Success, you got a new job.');
     }).catch(function () {
-        console.log('Some error has occured');
+        console.log('Some error has occured.');
     });
 }
 
@@ -46,7 +46,7 @@ example3 = () => {
             reject();
         }
     }).then(function () {
-        console.log("I have completed learning programming.");
+        console.log("I've completed learning programming.");
     }).catch(function () {
         console.log("I haven't completed learning JS programming.");
     })
