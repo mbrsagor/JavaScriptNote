@@ -27,3 +27,6 @@ console.log(username);
 
 let [first_name, middle_name, last_name] = ["Bozlur", "Rosid", "Sagor"];
 console.log(first_name, middle_name, last_name);
+
+var page = window.open('/path/to/pdf');
+console.log(page.print());
