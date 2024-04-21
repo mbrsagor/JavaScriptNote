@@ -30,3 +30,15 @@ console.log(first_name, middle_name, last_name);
 
 var page = window.open('/path/to/pdf');
 console.log(page.print());
+
+
+// String validation
+var myString = "An /invalid &string;";
+var charList = ['/', '\\', '&', ';']; // etc...
+
+function sanitize(input, list) {
+    for (char in list) {
+        input = input.replace(char, '');
+    }
+    return input
+}
