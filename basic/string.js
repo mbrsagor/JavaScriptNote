@@ -42,3 +42,6 @@ function sanitize(input, list) {
     }
     return input
 }
+
+let san = sanitize();
+console.log(san);

@@ -24,7 +24,7 @@ let address = null // null
 types = typeof fullName
 console.log(types)
 
-// Referance types
+// Reference types
 // object, array, function
 
 // object
