@@ -45,3 +45,8 @@ function sanitize(input, list) {
 
 let san = sanitize();
 console.log(san);
+
+let text2 = "How are you doing today?";
+const myArray = text2.split(" ");
+let word = myArray[1];
+console.log(word);
