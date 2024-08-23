@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://img.icons8.com/?size=100&id=SYr46wFfJEEG&format=png&color=000000"
+      type="image/x-icon"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap" rel="stylesheet">
+    <title>Ticket details view</title>
+    <style>
+      body {
+        font-size: 14px;
+        font-family: "DM Serif Text", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .container {
+        max-width: 450px;
+        margin: 0 auto;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        background-color: #f9f9f9;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: auto;
+        word-wrap: break-word;
+        hyphens: auto;
+        line-height: 1.5;
+        color: #333;
+        font-size: 16px;
+        line-height: 1.6;
+        letter-spacing: 0.01em;
+        box-sizing: border-box;
+        transition: background-color 0.3s ease;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        display: flex;
+      }
+      .content {
+        padding: 0;
+        margin: 0;
+      }
+      .event_sub_info {
+        padding: 10px;
+      }
+      .event_sub_info h3 {
+        margin: 0;
+        padding-bottom: 10px;
+        text-transform: uppercase;
+        color: #1A434E
+      }
+      .ticket_info p {
+        margin: 1px;
+      }
+      .ticket_info img {
+        width: 100%;
+      }
+      .qr_code {
+        text-align: center;
+        text-transform: uppercase;
+      }
+      .qr_code img {
+        width: 40%;
+      }
+      .qr_code p {
+        font-size: 20px;
+        margin: 0;
+        padding-bottom: 5px;
+      }
+      .event_desc {
+        padding: 15px;
+      }
+      .event_desc h4 {
+        margin: 0;
+        text-transform: uppercase;
+        color: #1A434E;
+      }
+      .event_desc p {
+        margin: 0;
+        padding-top: 10px;
+        text-align: justify;
+      }
+      .btn {
+        background: #1A434E;
+        color: #ffffff;
+        padding: 13px 40px;
+        border: 0 transparent;
+        margin-bottom: 10px;
+        border-radius: 15px;
+        cursor: pointer;
+        font-size: 18px;
+        margin-bottom: 35px;
+        font-family: "DM Serif Text", serif;
+        font-weight: 400;
+        font-style: normal;
+      }
+      .quantity {
+      display: flex;
+      border-radius: 4px;
+      overflow: hidden;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+      max-width: 120px;
+      margin: 15px auto;
+    }
+
+  .quantity button {
+    background-color: #1A434E;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-size: 20px;
+    width: 30px;
+    height: auto;
+    text-align: center;
+    transition: background-color 0.2s;
+  }
+
+.input-box {
+  width: 40px;
+  text-align: center;
+  border: none;
+  padding: 8px 10px;
+  font-size: 16px;
+  outline: none;
+}
+
+/* Hide the number input spin buttons */
+.input-box::-webkit-inner-spin-button,
+.input-box::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.input-box[type="number"] {
+  -moz-appearance: textfield;
+}
+
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="content">
+        <div class="ticket_info">
+          {% if ticket.event.thumbnail %}
+          <img src="{{ ticket.event.thumbnail.url }}" alt="" />
+          {% else %}
+          <img
+            src="https://static.vecteezy.com/system/resources/thumbnails/005/720/479/small_2x/banner-abstract-background-board-for-text-and-message-design-modern-free-vector.jpg"
+            alt=""
+          />
+          {% endif %}
+          <div class="event_sub_info">
+            <h3>{{ticket.event.title}}</h3>
+            <p>
+              <img
+                style="width: 20px; height: 18px"
+                src="https://img.icons8.com/?size=100&id=23&format=png&color=000000"
+                alt=""
+              />
+              &nbsp;{{ticket.event.start_date}}
+            </p>
+            <p>
+              <img
+                style="width: 20px; height: 18px"
+                src="https://img.icons8.com/?size=100&id=p5n5ZAUprZsA&format=png&color=000000"
+                alt=""
+              />
+              {{ticket.event.location}}
+            </p>
+          </div>
+        </div>
+        <div class="event_desc">
+          <h4>Event details</h4>
+          <p>{{ ticket.event.description }}</p>
+        </div>
+        <div class="qr_code">
+          <h3 style="color: #1A434E">Scan for join</h3>
+          <img id="myImage" alt="Base64 Image" />
+          <p style="color: #1A434E"><b>{{ticket.ticket_number}}</b></p>
+          {% if ticket.is_active is False and ticket.is_scanned is False %}
+          <form action="{% url 'create-checkout-session' %}" method="POST">
+            {% csrf_token %}
+            <div class="quantity">
+              <button type="button" class="minus" aria-label="Decrease">&minus;</button>
+              <input type="number" class="input-box" value="1" min="1" max="10" readonly="readonly">
+              <button type="button" class="plus" aria-label="Increase">&plus;</button>
+            </div>
+            <button id="result" class="btn" type="submit">Purchase New Ticket (${{ticket_price}})</button>
+          </form>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+    <script src="https://js.stripe.com/v3/"></script>
+    <script>
+        // Base64 encoded string (example PNG image)
+        const base64String = "{{ ticket.ticket_qrcode|escapejs }}";
+        // Create an image element
+        const img = document.getElementById('myImage');
+        // Set the src attribute of the image element
+        img.src = `data:image/png;base64,${base64String}`;
+
+        // Change ticket price on click
+        let ticket_price = "{{ event.single_ticket_price|escapejs }}" 
+        const button = document.getElementById('showDataButton');
+        
+        console.log(ticket_price);
+    </script>
+
+    <script>
+      (function () {
+      const quantityContainer = document.querySelector(".quantity");
+      const minusBtn = quantityContainer.querySelector(".minus");
+      const plusBtn = quantityContainer.querySelector(".plus");
+      const inputBox = quantityContainer.querySelector(".input-box");
+
+      updateButtonStates();
+
+      quantityContainer.addEventListener("click", handleButtonClick);
+      inputBox.addEventListener("input", handleQuantityChange);
+
+      function updateButtonStates() {
+        const value = parseInt(inputBox.value);
+        minusBtn.disabled = value <= 1;
+        plusBtn.disabled = value >= parseInt(inputBox.max);
+      }
+
+      function handleButtonClick(event) {
+        if (event.target.classList.contains("minus")) {
+          decreaseValue();
+        } else if (event.target.classList.contains("plus")) {
+          increaseValue();
+        }
+      }
+
+      function decreaseValue() {
+        let value = parseInt(inputBox.value);
+        value = isNaN(value) ? 1 : Math.max(value - 1, 1);
+        inputBox.value = value;
+        updateButtonStates();
+        handleQuantityChange();
+      }
+
+      function increaseValue() {
+        let value = parseInt(inputBox.value);
+        value = isNaN(value) ? 1 : Math.min(value + 1, parseInt(inputBox.max));
+        inputBox.value = value;
+        updateButtonStates();
+        handleQuantityChange();
+      }
+
+      function handleQuantityChange() {
+        let value = parseInt(inputBox.value);
+        value = isNaN(value) ? 1 : value;
+
+        // Execute your code here based on the updated quantity value
+        console.log("Quantity changed:", value);
+    }
+    })();
+    </script>
+  </body>
+</html>
+
