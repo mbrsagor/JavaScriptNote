@@ -189,7 +189,8 @@
               <input type="number" class="input-box" value="1" min="1" max="10" readonly="readonly">
               <button type="button" class="plus" aria-label="Increase">&plus;</button>
             </div>
-            <button id="result" class="btn" type="submit">Purchase New Ticket (${{ticket_price}})</button>
+            <input style="display: none;" step="0.01" type="number" class="totalprice" name="price">
+            <button class="btn" type="submit">Purchase New Ticket $ <span class="showPrice"></span></button>
           </form>
           {% endif %}
         </div>
@@ -203,12 +204,6 @@
         const img = document.getElementById('myImage');
         // Set the src attribute of the image element
         img.src = `data:image/png;base64,${base64String}`;
-
-        // Change ticket price on click
-        let ticket_price = "{{ event.single_ticket_price|escapejs }}" 
-        const button = document.getElementById('showDataButton');
-        
-        console.log(ticket_price);
     </script>
 
     <script>
@@ -219,6 +214,7 @@
       const inputBox = quantityContainer.querySelector(".input-box");
 
       updateButtonStates();
+      calcualtePrice();
 
       quantityContainer.addEventListener("click", handleButtonClick);
       inputBox.addEventListener("input", handleQuantityChange);
@@ -229,11 +225,26 @@
         plusBtn.disabled = value >= parseInt(inputBox.max);
       }
 
+      // Change ticket price on click
+      function calcualtePrice() {
+        let value = parseInt(inputBox.value);
+        let ticket_price = "{{ event.single_ticket_price|escapejs }}" 
+        //let result = document.querySelector(".showPrice").innerHTML = ticket_price * value;
+        let result = ticket_price * value;
+        let final_price = result.toFixed(2);
+        document.querySelector(".showPrice").innerHTML = final_price;
+        document.querySelector(".totalprice").value = final_price;
+      }
+
       function handleButtonClick(event) {
         if (event.target.classList.contains("minus")) {
           decreaseValue();
+          // Change ticket price on click
+          calcualtePrice();
         } else if (event.target.classList.contains("plus")) {
           increaseValue();
+          // Change ticket price on click 
+          calcualtePrice();
         }
       }
 
@@ -256,10 +267,7 @@
       function handleQuantityChange() {
         let value = parseInt(inputBox.value);
         value = isNaN(value) ? 1 : value;
-
-        // Execute your code here based on the updated quantity value
-        console.log("Quantity changed:", value);
-    }
+      }
     })();
     </script>
   </body>
