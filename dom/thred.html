@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div id="result"></div>
+        <button onclick="startHandler()">Start Calculations</button>
+        <button onclick="clickHandler()">Click Me!</button>
+        <script>
+            let div = document.getElementById('result');
+            const startHandler  = () => {
+                let result = 0;
+                for(var i = 0 ; i< 10000000000; i++) {
+                    result+=i
+                } 
+                div.innerText += result;
+            }
+            const clickHandler = () => {
+                div.innerText += ' Button clicked';
+            }
+        </script>
+    </body>
+</html>
+
