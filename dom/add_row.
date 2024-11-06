@@ -1,0 +1,9 @@
+function addNewRow() {
+            // Get a reference to the original row
+            let originalRow = document.querySelector('.row.mb-2');
+            // Clone the row
+            let newRow = originalRow.cloneNode(true);
+            // Append the cloned row to the container
+            document.getElementById('formContainer').appendChild(newRow);
+        }
+
