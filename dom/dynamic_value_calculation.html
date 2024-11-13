@@ -1,0 +1,23 @@
+<script>
+    // Function to calculate total price
+    function calculateTotal() {
+      // Get quantity and price values
+      const quantity = parseFloat(document.getElementById('quantity').value)
+      const price = parseFloat(document.getElementById('amount').value)
+    
+      // Calculate total price if inputs are valid
+      if (!isNaN(quantity) && !isNaN(price)) {
+        const total = quantity * price
+    
+        // Display the total price in the DOM
+        document.getElementById('totalPrice').value = total.toFixed(2)
+      } else {
+        // Display 0.00 if inputs are invalid or empty
+        document.getElementById('totalPrice').value = '0.00'
+      }
+    }
+    // Attach event listeners to input fields
+    document.getElementById('quantity').addEventListener('input', calculateTotal)
+    document.getElementById('price').addEventListener('input', calculateTotal)
+  </script>
+
