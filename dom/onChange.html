@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>onChange with Select</title>
+    <script>
+        function handleSelectionChange(event) {
+            const selectedOption = event.target.value;
+            document.getElementById("selectedOption").innerText = `You selected: ${selectedOption}`;
+        }
+    </script>
+</head>
+<body>
+
+    <label for="colors">Choose a color: </label>
+    <select id="colors" onChange="handleSelectionChange(event)">
+        <option value="Red">Red</option>
+        <option value="Green">Green</option>
+        <option value="Blue">Blue</option>
+    </select>
+    <p id="selectedOption">You selected: </p>
+
+</body>
+</html>
+
