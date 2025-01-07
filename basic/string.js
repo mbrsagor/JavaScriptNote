@@ -50,3 +50,9 @@ let text2 = "How are you doing today?";
 const myArray = text2.split(" ");
 let word = myArray[1];
 console.log(word);
+
+// string format with variables
+var my_name = 'John';
+var s = `hello ${my_name}, how are you doing`;
+console.log(s); // prints hello John, how are you doing
+
