@@ -71,25 +71,30 @@ Internally, the `filter()` method iterates over each element of the array and pa
 The `filter()` method accepts two named arguments: a `callback` function and an optional object.
 
 
-###### Generator in javascript:
+###### Generator in javascript: Base64 converter
 ```javascript
-function* counter(value) {
- let step;
+// Helper function to convert file to Base64
+  const convertToBase64 = (file) => {
+    return new Promise((resolve, reject) => {
+      const reader = new FileReader();
+      reader.onload = () => resolve(reader.result);
+      reader.onerror = (error) => reject(error);
+      reader.readAsDataURL(file);
+    });
+  };
+```
 
- while (true) {
-   step = yield ++value;
-
-   if (step) {
-     value += step;
-   }
- }
-}
-
-const generatorFunc = counter(0);
-console.log(generatorFunc.next().value);   // 1
-console.log(generatorFunc.next().value);   // 2
-console.log(generatorFunc.next().value);   // 3
-console.log(generatorFunc.next(10).value); // 14
-console.log(generatorFunc.next().value);   // 15
-console.log(generatorFunc.next(10).value); // 26
+####### Convert:
+```javascript
+const handleFileChange = async (event) => {
+    const file = event.target.files[0];
+    if (file) {
+      try {
+        const base64 = await convertToBase64(file);
+        setIcon(base64); // Save Base64 string
+      } catch (err) {
+        console.error("Error converting file to Base64:", err);
+      }
+    }
+  };
 ```
