@@ -1,0 +1,16 @@
+version: '3'
+
+services:
+  react-app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+      args:
+        VITE_API_URL: ${VITE_API_URL}
+    container_name: rackinup-frontend
+    ports:
+      - "80:80"
+    restart: always
+    env_file:
+      - .env
+
