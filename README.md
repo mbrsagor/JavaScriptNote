@@ -1,8 +1,8 @@
 # JavaScript
 
-> Coding with `Bozlur Rosid Sagor`
+> Coding with `Bozlur Rosid Sagor.`
 
-In this topic I will use to visual stdio code(vs-code). First install `node.js` and `NPM`(node package manager) then install `vs-code` in your system. JavaScript `ES6` features is awesome if you learn the `ES6` you may easily handel `react, VUE, Angular` project.
+In this topic, I will use to visual stdio code(vs-code). First, install `Node.js` and `NPM` (Node Package Manager), then install `VS Code` on your system. JavaScript `ES6` features are awesome. If you learn `ES6`, you may easily handle `React, VUE, Angular` projects.
 
 ```javascript
 my_bio = () => "A simplest changes make huge difference.";
@@ -23,7 +23,7 @@ export PATH="/usr/local/bin:$PATH"
 brew install node
 npm install -g grunt-cli
 ```
-##### Check the node and NPM version both:
+##### Check the Node and NPM versions:
 ```
 npm -v
 node -v
@@ -35,19 +35,19 @@ node -v
     - Map
     - Filter
     - Conditional Statement
-- Special data type
+- Special data types
     - Fibonacci
     - Factorial
     - Recursion
     - Stack
     - Queue
-    - Link list
+    - Linked list
     - Binary search
 
 - Loop
     - For loop
     - While loop
-    - Do while loop
+    - Do-while loop
 
 - Function
     - Old function
@@ -67,11 +67,11 @@ node -v
 arrayObject.filter(callback, contextObject);
 ```
 The `filter()` method creates a new array with all the elements that pass the test implemented by the `callback()` function.
-Internally, the `filter()` method iterates over each element of the array and pass each element to the `callback` function. If the `callback` function returns `true`, it includes the element in the return array.
+Internally, the `filter()` method iterates over each element of the array and passes each element to the `callback` function. If the `callback` function returns `true`, it includes the element in the return array.
 The `filter()` method accepts two named arguments: a `callback` function and an optional object.
 
 
-###### Generator in javascript: Base64 converter
+###### Generator in JavaScript: Base64 converter
 ```javascript
 // Helper function to convert file to Base64
   const convertToBase64 = (file) => {
@@ -97,4 +97,8 @@ const handleFileChange = async (event) => {
       }
     }
   };
+```
+
+```javascript
+console.log(NaN === NaN);
 ```
