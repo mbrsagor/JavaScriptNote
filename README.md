@@ -61,7 +61,7 @@ node -v
     - Object 
 
 
-###### Intro of `filter` method
+###### Intro to the `filter` method
 
 ```javascript
 arrayObject.filter(callback, contextObject);
