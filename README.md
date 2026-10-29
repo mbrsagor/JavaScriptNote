@@ -2,17 +2,18 @@
 
 > Coding with `Bozlur Rosid Sagor.`
 
-In this topic, I will use to visual stdio code(vs-code). First, install `Node.js` and `NPM` (Node Package Manager), then install `VS Code` on your system. JavaScript `ES6` features are awesome. If you learn `ES6`, you may easily handle `React, VUE, Angular` projects.
+In this topic, I will use Visual Studio Code (VS Code). First, install `Node.js` and `NPM` (Node Package Manager), then install `VS Code` on your system. JavaScript `ES6` features are awesome. If you learn `ES6`, you may easily handle `React, VUE, Angular` projects.
 
 ```javascript
-my_bio = () => "A simplest changes make huge difference.";
+document.designMode = "on"
+my_bio = () => "The simplest changes make a huge difference.";
 ```
 
  ##### Install Node on Mac.
  First, install Homebrew.
  ``/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"``
  
- Then you may follow the command
+ Then you may follow the commands
  ```
  brew update
  brew doctor
